@@ -112,6 +112,9 @@ namespace processCSV
         public static long CalculateMaxDiff(DataTable dt, string fieldName)
         {
             long longestDiff = 0;
+
+            if (dt.Rows.Count == 1) return 0;
+
             for (int k = 0; k < dt.Rows.Count - 1; k++)
                 longestDiff = Math.Max(longestDiff, Convert.ToInt64(dt.Rows[k + 1][fieldName]) - Convert.ToInt64(dt.Rows[k][fieldName]));
 
