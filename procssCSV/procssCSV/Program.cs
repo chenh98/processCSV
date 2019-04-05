@@ -113,6 +113,7 @@ namespace processCSV
         {
             long longestDiff = 0;
 
+            //0
             if (dt.Rows.Count == 1) return 0;
 
             for (int k = 0; k < dt.Rows.Count - 1; k++)
